@@ -1,4 +1,4 @@
-describe('AluraPic registro de usuario + login', () => {
+describe('Funcionalidades da homepage', () => {
    beforeEach(()=> {
       cy.visit('https://alura-fotos.herokuapp.com');
          
@@ -22,7 +22,7 @@ describe('AluraPic registro de usuario + login', () => {
       cy.contains('ap-vmessage','Invalid e-mail').should('be.visible');
    })
 
-   //Criando um terceiro caso de teste -> escrever senha invalida
+   //Criando um terceiro caso de teste -> escrever nome maiuscul
    it('Verificar mensagens de senha curta', () => {   
       cy.contains('a', 'Register now').click();
       cy.contains('button', 'Register').click();
@@ -31,7 +31,7 @@ describe('AluraPic registro de usuario + login', () => {
       cy.contains('ap-vmessage','Must be lower case').should('be.visible');
    })
 
-   //Criando um quarto caso de teste -> escrever nome maiusculo
+   //Criando um quarto caso de teste -> escrever senha invalida
    it('Verificar mensagen de nome em minusculo', () => {   
       cy.contains('a', 'Register now').click();
       cy.contains('button', 'Register').click();
